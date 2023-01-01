@@ -27,6 +27,13 @@ provider "aws" {
   region  = "ap-northeast-1"
 }
 
+# CloudFront用プロバイダー
+provider "aws" {
+  alias   = "virginia"
+  profile = "terraform"
+  region  = "us-east-1"
+}
+
 # -----------------------
 # Variables
 # -----------------------
@@ -35,5 +42,9 @@ variable "project" {
 }
 
 variable "environment" {
+  type = string
+}
+
+variable "domain" {
   type = string
 }
