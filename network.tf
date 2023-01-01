@@ -34,7 +34,7 @@ resource "aws_subnet" "public_subnet_1a" {
 
 resource "aws_subnet" "public_subnet_1c" {
   vpc_id                  = aws_vpc.vpc.id # 既存のVPCのIDを指定する
-  availability_zone       = "ap-northeast-1a"
+  availability_zone       = "ap-northeast-1c"
   cidr_block              = "192.168.2.0/24"
   map_public_ip_on_launch = true # このサブネットグループに配置されたインスタンスにパブリックIPを割り当てるかどうか（通常False)
 
